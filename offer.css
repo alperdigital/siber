@@ -1,0 +1,48 @@
+.offer-fields, .offer-manual {
+  display: grid;
+  gap: .55rem;
+  min-width: 0;
+}
+
+.proposal .offer-hint, #teklif-dogrudan p {
+  color: var(--soft);
+  line-height: 1.5;
+}
+
+.proposal select {
+  margin-bottom: .65rem;
+}
+
+.offer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  margin-block: .4rem;
+}
+
+.offer-actions .action {
+  justify-content: center;
+  background: transparent;
+  color: var(--ink);
+  font-family: inherit;
+}
+
+.proposal .offer-copy {
+  min-height: 44px;
+  margin: 0;
+  padding: 0 .1rem;
+  border: none;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.offer-status {
+  color: var(--accent);
+}
+
+.offer-status:empty {
+  margin-top: -.55rem;
+}

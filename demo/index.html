@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Küçük servis işletmeleri için hazırlanmış etkileşimli talep takip panosu. Kurgusal örneklerle talep durumlarını ve iş listesini deneyin.">
+  <meta name="theme-color" content="#f1f5f7">
+  <title>Talep takip panosu | Abdullah Alper Baş</title>
+  <link rel="stylesheet" href="pano.css">
+  <script src="pano.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <header>
+    <nav class="wrap topbar" aria-label="Portföy bağlantıları">
+      <a class="back" href="../#portfoy">Portföye dön</a>
+      <a class="inquiry" href="../#teklif">Benzer bir proje konuşalım</a>
+    </nav>
+  </header>
+  <main id="icerik" class="wrap">
+    <div class="intro">
+      <div>
+        <p class="overline">Etkileşimli portföy örneği</p>
+        <h1>Talep takip panosu</h1>
+        <p class="intro-text">Bir servis işletmesinin gelen taleplerini ve sahadaki işleri tek listede takip edin. Bu örnekteki tüm kayıtlar kurgusaldır.</p>
+      </div>
+      <button type="button" class="reset" id="sifirla" hidden>Örneği sıfırla</button>
+    </div>
+    <dl class="metrics" aria-label="Duruma göre talep sayıları">
+      <div><dt><span class="dot" data-state="new"></span>Yeni</dt><dd data-count="new">2</dd></div>
+      <div><dt><span class="dot" data-state="progress"></span>İşlemde</dt><dd data-count="progress">2</dd></div>
+      <div><dt><span class="dot" data-state="done"></span>Tamamlandı</dt><dd data-count="done">1</dd></div>
+    </dl>
+    <section class="queue" aria-labelledby="liste-baslik">
+      <div class="toolbar">
+        <h2 id="liste-baslik">Servis talepleri</h2>
+        <div id="filtreler" class="filters" role="group" aria-label="Duruma göre filtrele" hidden>
+          <button type="button" data-filter="all" aria-pressed="true">Tümü</button>
+          <button type="button" data-filter="new" aria-pressed="false">Yeni</button>
+          <button type="button" data-filter="progress" aria-pressed="false">İşlemde</button>
+          <button type="button" data-filter="done" aria-pressed="false">Tamamlandı</button>
+        </div>
+      </div>
+      <noscript><p class="notice">Herhangi bir talebi açarak ayrıntılarını inceleyebilirsiniz. Filtreleme ve durum güncelleme için JavaScript gerekir.</p></noscript>
+      <div class="requests">
+        <details class="request" name="talep" data-state="new" open>
+          <summary><span class="number">T-105</span><span class="subject"><strong>Tezgâh soğutucusu arızası</strong><small>Liman Kahve · Konak</small></span><span class="status">Yeni</span><span class="toggle" aria-hidden="true"></span></summary>
+          <div class="body"><p>Tezgâh altı soğutucu hedef sıcaklığa ulaşmıyor. İşletme açılmadan önce arızanın yerinde incelenmesi isteniyor.</p></div>
+        </details>
+        <details class="request" name="talep" data-state="progress">
+          <summary><span class="number">T-104</span><span class="subject"><strong>Filtre ünitesi bakımı</strong><small>Mavi Atölye · Bornova</small></span><span class="status">İşlemde</span><span class="toggle" aria-hidden="true"></span></summary>
+          <div class="body"><p>Periyodik bakım için ekip sahada. Filtre değişimi tamamlandığında sistemin çalışması kontrol edilecek.</p></div>
+        </details>
+        <details class="request" name="talep" data-state="new">
+          <summary><span class="number">T-103</span><span class="subject"><strong>Yazarkasa bağlantı sorunu</strong><small>Ada Kitabevi · Karşıyaka</small></span><span class="status">Yeni</span><span class="toggle" aria-hidden="true"></span></summary>
+          <div class="body"><p>Kasadaki cihaz gün içinde bağlantı kaybediyor. İşletme, açık olduğu saatlerde uzaktan inceleme talep ediyor.</p></div>
+        </details>
+        <details class="request" name="talep" data-state="progress">
+          <summary><span class="number">T-102</span><span class="subject"><strong>Raf aydınlatmasının yenilenmesi</strong><small>Çınar Market · Bayraklı</small></span><span class="status">İşlemde</span><span class="toggle" aria-hidden="true"></span></summary>
+          <div class="body"><p>Mağazadaki arızalı aydınlatmalar belirlendi. Değişim için malzeme hazır, saha ekibiyle montaj saati planlanıyor.</p></div>
+        </details>
+        <details class="request" name="talep" data-state="done">
+          <summary><span class="number">T-101</span><span class="subject"><strong>Etiket yazıcısı kurulumu</strong><small>Kordon Tasarım · Balçova</small></span><span class="status">Tamamlandı</span><span class="toggle" aria-hidden="true"></span></summary>
+          <div class="body"><p>Yazıcı kuruldu ve deneme etiketi basıldı. Mağaza ekibi ilk ürün etiketini kendi ekranından hazırladı.</p></div>
+        </details>
+      </div>
+      <p id="bos" class="notice" hidden>Bu durumda talep yok. Başka bir durumu veya “Tümü” seçeneğini seçebilirsiniz.</p>
+    </section>
+    <p class="footnote" id="gecici" hidden>Değişiklikler yalnızca bu sayfada geçerlidir. Sayfayı yenilediğinizde örnek kayıtlar ilk hâline döner.</p>
+    <p id="bildirim" role="status" class="sr-only"></p>
+  </main>
+</body>
+</html>

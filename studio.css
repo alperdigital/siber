@@ -1,0 +1,141 @@
+/* Portfolio introduction, case studies and direct contact. */
+.portfolio .brand-monogram {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-right: .65rem;
+  padding: .22rem .42rem .28rem;
+  border-radius: .32rem;
+  background: var(--accent);
+  color: #0b1721;
+  font: 750 1.07rem/1.2 "Segoe UI", sans-serif;
+  letter-spacing: -.08em;
+}
+.portfolio .brand-monogram span { color: inherit; }
+.portfolio .header-name { font-family: "Segoe UI", system-ui, sans-serif; }
+.portfolio .header-title { font-weight: 450; }
+.navigation nav { column-gap: clamp(.75rem, 1.7vw, 1.7rem); }
+.studio-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  padding-block: clamp(3.3rem, 6.2vw, 6rem);
+}
+.portfolio .studio-eyebrow, .case-type {
+  color: var(--accent);
+  font: 650 .83rem/1.5 Consolas, "Courier New", monospace;
+  letter-spacing: .095em;
+  text-transform: uppercase;
+}
+.studio-eyebrow span { margin-inline: .38rem; color: #7996a4; }
+.portfolio .studio-intro h1 {
+  margin-block: 1.05rem 1.4rem;
+  font-size: clamp(3.2rem, 5.35vw, 5.35rem);
+  font-weight: 640;
+  letter-spacing: -.06em;
+  line-height: 1.02;
+}
+.studio-intro h1 em, .intro-copy h2 em {
+  display: block;
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -.045em;
+}
+.studio-lead { color: var(--soft); font-size: clamp(1.03rem, 1.4vw, 1.2rem); max-width: 47ch; }
+.portfolio .studio-preview {
+  display: block;
+  overflow: hidden;
+  color: var(--ink);
+  border: 1px solid #365063;
+  border-radius: 1rem;
+  background: #101d2c;
+  text-decoration: none;
+}
+.preview-stage {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: clamp(1.2rem, 3.4vw, 3.5rem) clamp(1.15rem, 2.8vw, 2.5rem);
+  background-color: #193143;
+  background-image: linear-gradient(90deg, #bfeaf407 1px, transparent 1px),
+    linear-gradient(#bfeaf407 1px, transparent 1px),
+    radial-gradient(ellipse at 75% 15%, #37727a, transparent 72%);
+  background-size: 20px 20px, 20px 20px, auto;
+}
+.preview-stage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: .42rem;
+  box-shadow: 0 14px 30px #07131e65;
+}
+.preview-caption { display: flex; justify-content: space-between; align-items: center; gap: .75rem; padding: .85rem 1.2rem; font-weight: 600; }
+.preview-caption span:last-child { font-size: .875rem; color: var(--accent); text-decoration: underline; text-underline-offset: .24em; }
+.studio-preview:hover { border-color: var(--accent); }
+.portfolio .studio-work {
+  --ink: #122535;
+  --soft: #415767;
+  --accent: #076070;
+  background: #edf3f2;
+  border: 0;
+  color: var(--ink);
+}
+.portfolio .studio-work .studio-eyebrow, .intro-copy .studio-eyebrow { margin-bottom: .65rem; }
+.portfolio .studio-work .portfolio-section { padding-block: clamp(2.7rem, 5.5vw, 4.8rem); }
+.portfolio .studio-work #projeler { display: block; }
+.case-row {
+  display: grid;
+  grid-template-columns: minmax(8rem, .72fr) minmax(0, 2.2fr) minmax(8rem, .65fr);
+  align-items: baseline;
+  gap: 1.2rem;
+  border-top: 1px solid #b9cbc9;
+  padding: 1.55rem 0;
+}
+.case-row:last-child { border-bottom: 1px solid #b9cbc9; }
+.case-row h3 { font-weight: 650; font-size: clamp(1.3rem, 2.1vw, 1.75rem); letter-spacing: -.035em; }
+.case-row h3 + p { margin-top: .42rem; color: var(--soft); max-width: 61ch; }
+.case-link { justify-self: end; font-weight: 650; text-underline-offset: .25em; padding-block: .5rem; }
+.case-link:hover { color: var(--accent); }
+.portfolio .section-title h2, .portfolio .contact-panel h2 { font-weight: 600; }
+.portfolio .intro-copy h2 { font-size: clamp(2.8rem, 5vw, 4.8rem); }
+.project-steps { margin: 1.7rem 0 0; }
+.project-steps div { display: grid; grid-template-columns: 7.7rem 1fr; gap: .7rem; border-top: 1px solid var(--edge); padding: .8rem 0; }
+.project-steps dt { color: var(--ink); font-weight: 650; }
+.project-steps dd { margin: 0; color: var(--soft); }
+.studio-contact { align-items: flex-start; }
+.studio-contact .studio-eyebrow { margin-bottom: .75rem; }
+.studio-contact h2 { max-width: 14ch; }
+.studio-contact h2 + p { margin-block: .85rem .25rem; }
+.contact-methods { display: grid; justify-items: start; gap: .6rem; }
+.contact-methods > a { font-size: 1.1rem; }
+.portfolio .inline-text { color: var(--accent); text-underline-offset: .22em; font-size: .94rem; }
+.contact-methods .contact-links { margin-block: .4rem; }
+@media (min-width: 761px) and (max-width: 960px) {
+  .header-separator, .header-name .header-title { display: none; }
+}
+@media (max-width: 760px) {
+  .portfolio .navigation .header-name { display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: .6rem; }
+  .portfolio .brand-monogram { grid-row: span 2; align-self: stretch; align-items: center; padding-inline: .55rem; margin-right: 0; }
+  .portfolio .header-name .header-title { font-size: .85rem; margin: 0; }
+  .studio-intro { grid-template-columns: minmax(0, 1fr); gap: 1.8rem; padding-block: 2.35rem; }
+  .studio-intro-copy { max-width: 37rem; }
+  .studio-preview { width: 100%; max-width: 35rem; }
+  .preview-stage { padding: 1.25rem 1.45rem; }
+  .case-row { grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: .5rem 1rem; }
+  .case-type { grid-column: 1 / -1; }
+  .portfolio .contact-panel { flex-direction: column; }
+}
+@media (max-width: 500px) {
+  .portfolio .studio-intro h1 { font-size: clamp(2.85rem, 12vw, 3.65rem); }
+  .studio-intro .portfolio-actions { gap: .5rem; }
+  .case-row { display: block; }
+  .case-row .case-type { margin-bottom: .45rem; }
+  .case-link { display: inline-block; margin-top: .35rem; }
+  .project-steps div { grid-template-columns: 1fr; gap: .12rem; }
+  .portfolio .action { padding-inline: .75rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
